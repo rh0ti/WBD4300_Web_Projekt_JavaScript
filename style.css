@@ -1,0 +1,2134 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow|Cinzel|Julius+Sans+One|Poiret+One|Quicksand|Raleway&display=swap');
+
+/* My CSS Reset */
+*{
+	margin: 0;
+	padding: 0;
+	}
+
+*, *:after, *:before{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* MOBILE */
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    color: #707070;
+    text-transform: uppercase;
+}
+
+#topBtn{
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 22px; 
+    width: 50px;
+    height: 50px;
+    background:#707070;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+    
+/* MOBILE - Grid - Whole Webpage */
+
+#content{
+    display: grid;
+    grid-template-columns: 375px;
+    grid-template-rows: 812px 812px 812px 812px 812px 812px ;
+    grid-gap: 10px;
+    max-width: 375px;
+    margin: 0 auto;
+}
+
+#content >*{
+    background: rgb(255, 255, 255);         
+}
+
+/*--------------------------MOBILE First Page - Header/Navigation/Sidebar----------------------------- */
+
+header{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+header nav{
+    height:100px;
+    width: 100%;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 999;      
+}
+
+header nav img{
+    height: 100px;
+    position: absolute;
+}
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -300px;
+    background: white;
+    opacity: 0.95;
+    width: 300px;
+    height: 100%;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.active{
+    left: 0;
+}
+
+ul{
+    margin:0;
+    padding: 20px 0;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    padding: 10px 20px;
+    color: black;
+    display: block;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.sidebarBtn{
+    position: absolute;
+    top:5px;
+    right: -70px;
+    width: 50px;
+    height: 50px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.sidebarBtn span{
+    display: block;
+    width: 35px;
+    height: 3px;
+    background: #262626;
+    position: absolute;
+    top: 24px;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.sidebarBtn span:before{ 
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #262626;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.sidebarBtn span:after{ 
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #262626;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.sidebarBtn.toggle span{
+    background: transparent;
+}
+
+.sidebarBtn.toggle span:before{
+    top: 0;
+    -webkit-transform:rotate(45deg);
+            transform:rotate(45deg) 
+}
+
+.sidebarBtn.toggle span:after{
+    top: 0;
+    -webkit-transform:rotate(-45deg);
+            transform:rotate(-45deg)  
+}
+
+ /* MOBILE - Header - Image */
+
+header .image-title{
+    height: 812px;
+    width: 375px;
+    background-image: url(images/feather.jpeg);
+    background-size: cover;
+    background-position: top;
+    position: absolute;
+    z-index: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+
+header .image-title img{
+    height: 90px;
+    position: relative;
+    top: 30%;
+    -webkit-animation: title 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+            animation: title 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes title{
+    0% {
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes title{
+    0% {
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+
+
+/*--------------------------MOBILE - Section Aktuell - Second Page----------------------------- */
+
+
+#aktuell{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;   
+}
+
+#aktuell .image-frame{
+    width: 100%;
+    height: 100%; 
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+/* MOBILE - Container for the Slideshow */
+#aktuell  .container-slides{
+    height: 90%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    margin: 20px auto 0 auto;
+    top: 18%;
+    border: none;
+}
+
+
+/* Mobile - Container for for all the Slides */
+#aktuell ul{
+    width: 400%;
+    height: 150%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;   
+    position: relative;
+    top: 0%;
+}
+
+/* Mobile - Single Slides*/
+#aktuell .image-frame ul li{
+position: relative;
+width: 100%;
+height: 50%;
+top: -20%;
+}
+
+#aktuell .image-aktuell-1{
+    background-image: url(images/image-aktuell.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#aktuell .image-aktuell-2{
+    background-image: url(images/bild-1.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#aktuell .image-aktuell-3{
+    background-image: url(images/bild-12.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#aktuell .image-aktuell-4{
+    background-image: url(images/bild-5.jpeg);
+    background-position: center;
+    background-size: cover;
+}
+
+#aktuell .title{
+    position: absolute;
+    font-size: 50px;
+    bottom: 85%;
+    left: 0%;
+}
+
+#aktuell .text .date{
+    position: absolute; 
+    padding: 2%;
+    text-align: left;
+    left: 0%;
+    bottom: 113%;
+}
+
+#aktuell .text .company{
+    position: absolute; 
+    text-align: left;
+    padding: 1%;
+    left: 0%;
+    bottom: 100%;
+}
+
+#aktuell .text p{
+    position: absolute; 
+    width: 90%;
+    height: 100%;
+    padding: 2%;
+    text-align: left;
+    left: 0%;
+    bottom: -101%;
+}
+
+/* Mobile - Weiter und Zurück Button */
+
+a.button_zurueck,a.button_weiter{
+position:absolute;
+top: 46%;
+z-index:999;
+display: block;
+padding: 4% 3%;
+width: auto;
+height: auto;
+background: #2a2a2a;
+color: #fff;
+text-decoration: none;
+font-weight: 500;
+font-size: 1.2rem;
+opacity: 0.8;
+cursor: pointer;
+}
+
+a.button_zurueck:hover,a.button_weiter:hover{
+    opacity: 1;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+a.button_zurueck{
+    left:0;
+    border-radius: 0 2px 2px 0;
+}
+
+
+a.button_weiter{
+    right:0;
+    border-radius: 2px 0 0 2px;
+}
+
+/* Linien */
+
+#aktuell .line1{
+    height: 2px;
+    width:80px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 9%;
+    right: 0%;
+    z-index: 90;
+}
+
+#aktuell .line2{
+    height: 2px;
+    width: 120px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    z-index: 90;
+}
+
+#aktuell .line3{
+    height: 2px;
+    width: 100px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 11%;
+    right: 0%;
+    z-index: 90;
+}
+
+
+/*--------------------------MOBILE - Section About - Third Page----------------------------- */
+
+#about{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;  
+}
+
+#about .image-frame{
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: none;
+}
+
+#about .image-frame .image-about{
+    width: 100%;
+    height: 353px;
+    background-image: url(images/image-about.jpg);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+}
+
+#about .title{
+    position: absolute;
+    font-size: 50px;
+    bottom: 85%;
+    right: 0%;
+} 
+
+#about .text h1{
+    position: absolute; 
+    padding: 2%;
+    text-align: left;
+    right: -1%;
+    bottom: 78%;
+}
+
+#about .text small{
+    position: absolute; 
+    text-align: left;
+    padding: 1%;
+    right: 0%;
+    top: 21%;
+}
+
+#about .text p{
+    position: absolute; 
+    text-align: left;
+    left: 0%;
+    padding: 1%;
+    bottom: 10%;
+    font-size: 80%;
+}
+
+/* Linien */
+
+#about .line1{
+    height: 2px;
+    width:80px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 9%;
+    left: 0%;
+    z-index: 90;
+}
+
+#about .line2{
+    height: 2px;
+    width: 120px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    z-index: 90;
+}
+
+#about .line3{
+    height: 2px;
+    width: 100px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 11%;
+    left: 0%;
+    z-index: 90;
+}
+
+/*--------------------------MOBILE - Section Service - Fourth Page----------------------------- */
+
+#service{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    font-size: 13px;     
+}
+
+#service .title{
+    position: absolute;
+    font-size: 50px;
+    bottom: 84%;
+    margin: 10px;
+    left: 0%;
+} 
+
+#service .web{
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    top:200px;
+    left: 30%;
+}
+
+#service .film{
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    top:400px;
+    left: 0%;
+    max-width: 80%;
+}
+
+#service .event{
+    padding: 10px;
+    text-align: left;
+    position: absolute;
+    top:600px;
+    left: 30%;   
+}
+
+/* Linien */
+
+#service .line1{
+    height: 2px;
+    width:80px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 9%;
+    right: 0%;
+    z-index: 90;
+}
+
+#service .line2{
+    height: 2px;
+    width: 120px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    z-index: 90;
+}
+
+#service .line3{
+    height: 2px;
+    width: 100px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 11%;
+    right: 0%;
+    z-index: 90;
+}
+
+    /* MOBILE - Section Service - Circle */
+
+#service .circle1 {
+    position: absolute;
+    height: 100px;
+    width:100px;
+    border-radius: 50%;
+    background-color: #b6b6b6;
+    -webkit-animation: circle 1.5s ease-in-out infinite both;
+            animation: circle 1.5s ease-in-out infinite both;
+    left: 0%;
+    top: 29%;
+}
+
+#service .circle2 {
+    position: absolute;
+    height: 60px;
+    width:60px;
+    border-radius: 50%;
+    background-color: #858383;
+    -webkit-animation: circle 1.5s ease-in-out infinite both;
+            animation: circle 1.5s ease-in-out infinite both;
+    right: 0%;
+    top: 55%;
+    
+}
+
+#service .circle3 {
+    position: absolute;
+    height: 120px;
+    width:120px;
+    border-radius: 50%;
+    background-color: #707070;
+    -webkit-animation: circle 1.5s ease-in-out infinite both;
+            animation: circle 1.5s ease-in-out infinite both;
+    left: -5%;
+    top: 75%;
+    
+}
+
+@-webkit-keyframes circle {
+    0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+    50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    }
+    100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+}
+
+@keyframes circle {
+    0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+    50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+    }
+    100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    }
+}
+  
+/*--------------------------MOBILE - Section Gallery - Fifth Page----------------------------- */
+
+#gallery{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;   
+}
+
+#gallery .title{
+    position: absolute;
+    font-size: 50px;
+    bottom: 85%;
+    right: 0%;
+} 
+
+#gallery .image-frame{
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: none;
+    
+}
+
+#gallery .image-frame #image-gallery{
+    width: 100%;
+    height: 353px;
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+
+}
+
+#gallery .image-frame #image-gallery img{
+    height: 100%;
+    width: 100%;
+}
+
+.bilder img{
+    width: 60px; 
+    height: 70px;
+    bottom: -110%;
+    position: relative;
+}
+
+.bilder{
+    position: absolute; 
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+    bottom: 7%;
+    left:11%;
+    
+}
+
+.bilder img:hover{
+    opacity: 0.5;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+
+/* Linien */
+
+#gallery .line1{
+    height: 2px;
+    width:80px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 9%;
+    left: 0%;
+    z-index: 90;
+}
+
+#gallery .line2{
+    height: 2px;
+    width: 120px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 10%;
+    left: 0%;
+    z-index: 90;
+}
+
+#gallery .line3{
+    height: 2px;
+    width: 100px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 11%;
+    left: 0%;
+    z-index: 90;
+}
+        
+/*--------------------------MOBILE - Section Contact - Sixth Page----------------------------- */
+
+#contact{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    
+}
+
+#contact .image-frame{
+    width: 100%;
+    height: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border: none;
+    background: #707070;
+}
+
+#contact .title{
+    position: absolute;
+    font-size: 50px;
+    bottom: 85%;
+    left: 0%;
+
+}
+
+#contact .text small{
+    position: absolute; 
+    padding: 2%;
+    text-align: left;
+    left: 0%;
+    bottom: 80%;
+}
+
+#contact .text h1{
+    position: absolute; 
+    text-align: left;
+    padding: 1%;
+    left: 0%;
+    top: 20%;
+}
+
+#contact .text p{
+    position: absolute; 
+    width: 357px;
+    height: 150px;
+    padding: 2%;
+    text-align: left;
+    left: 0%;
+    bottom: 5%;
+}
+
+#contact .text p{
+    position: absolute; 
+    width: 357px;
+    height: 150px;
+    padding: 2%;
+    text-align: left;
+    left: 0%;
+    bottom: 5%;
+}
+
+    /* - Formular*/
+
+form{ 
+    height: 50%;
+    width: 100%;
+    position: relative;
+    top:20%;
+    
+}
+
+label{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    color: white;
+    padding: 2%;
+}
+
+input{
+    width: 100%;
+    height: 9%;
+
+}
+
+textarea{
+    width: 100%;
+}
+
+.submitinput{
+    width: 30%;
+    color: white;
+    background-color: #707070;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 80%;
+}
+
+button{
+    margin: 1em 0;
+    padding: 0.5em 0;
+    background-color:rgb(196, 196, 196);
+    border: solid 1px white;
+    width: 50%;
+    color: #707070;
+    }
+    
+form button:hover{
+    background-color: white;
+    cursor: pointer;
+    }
+
+form input:focus{
+    outline: black auto 5px;
+    }
+    
+form span{
+    color: red;
+    font-family: sans-serif;
+    font-size: 12px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+    
+    .mybox{
+    width: 250px;
+    height: 250px;
+    color: #707070;
+    background-color: #fff;
+    font-size: 1em;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding: 1em;
+    position: absolute;
+    left: 17%;
+    top: 35%;
+}
+    
+/* Linien */
+
+#contact .line1{
+    height: 2px;
+    width:80px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 9%;
+    right: 0%;
+    z-index: 90;
+}
+
+#contact .line2{
+    height: 2px;
+    width: 120px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    z-index: 90;
+}
+
+#contact .line3{
+    height: 2px;
+    width: 100px;
+    margin: 5px;
+    background: #707070;
+    position: absolute;
+    top: 11%;
+    right: 0%;
+    z-index: 90;
+}
+
+/* --------------------------------------------------------------- Desktop / Tablet ------------------------------------------------------------------------------*/
+
+
+@media screen and (min-width:736px){
+
+
+    /* Desktop - Grid - Whole Webpage */ 
+
+
+    #content{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(5,1fr);
+        grid-gap: 50px;
+        max-width: 100vw;
+        margin: 0 auto;
+    }
+
+/*--------------------------DESKTOP - Header/Sidebar/Navigation - First Page----------------------------- */
+
+
+    header{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        
+    }
+
+    /* Desktop - Navigation - Menu*/
+
+    nav img{
+        height: 100px;
+    }
+
+    .sidebar{
+        position: fixed;
+        top: 0;
+        left: -650px;
+        background: white;
+        opacity: 0.7;
+        width: 650px;
+        height: 100%;
+        -webkit-transition: .3s;
+        transition: .3s;
+    }
+
+    .active{
+        left: 0;
+    }
+
+    ul{
+        margin:0;
+        padding: 20px 0;
+    }
+
+    ul li{
+        list-style: none;
+    }
+
+    ul li a{
+        padding: 30px 40px;
+        color: black;
+        display: block;
+        text-decoration: none;
+        font-size: 35px;
+  
+    }
+
+    /* Desktop - Header */
+
+
+    header .image-title{
+        background-image: url('images/feather.jpeg');
+        background-size: cover;
+        background-position: top;
+        position: relative;
+        width: 85%;
+        height: 150%;	
+        -webkit-box-pack: center;	
+            -ms-flex-pack: center;	
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        
+    }
+
+    header .image-title img{
+        height: 150px;
+        position: absolute;
+    }
+
+
+    .line1{
+        height: 50px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: 8%;
+        left: 49%;
+    }
+
+    .line2{
+        height: 100px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: 5%;
+        left: 49.5%;
+    }
+
+    .line3{
+        height: 65px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: 7%;
+        left: 50%;
+    }
+        
+/*--------------------------DESKTOP - Section Aktuell - Second Page ----------------------------- */
+
+    #aktuell{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack:center;
+            -ms-flex-pack:center;
+                justify-content:center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+    }
+
+    #aktuell .image-frame{
+        width: 46%;
+        height: 100%;
+        border: solid 1px black;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+    }
+
+    /* Container for the Slideshow */
+
+    #aktuell .image-frame .container-slides{
+        width: 88%;
+        height: 750px;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+
+    /* Container for for all the Slides */
+
+    #aktuell ul{
+        width: 400%;
+        height: 190%;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;   
+        position: absolute;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: -30%;
+        border: #262626 solid 1px;
+    }
+
+    #aktuell li{
+        width: 70%;
+        height: 100%;
+    }
+
+    #aktuell .title{
+        -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+        position: absolute;
+        font-size: 100px;
+        left: -20%;
+        top: 0%;
+        z-index: 888;
+    } 
+
+    #aktuell .text .date{
+        position: absolute;
+        left:0%;
+        top: -24%;
+        width: 100%;
+    }
+
+    #aktuell .image-frame .text .company{
+        position: absolute;
+        left:0%;
+        top: 20%;
+        width: 100%;   
+    }
+
+    #aktuell .image-frame .text p{
+        position: absolute;
+        left:0%;
+        top: 100%;
+        width: 100%
+    }
+
+    /* Button */
+
+    #aktuell a.button_zurueck:hover,a.button_weiter:hover{
+        opacity: 1;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+    
+    #aktuell a.button_zurueck{
+        left:0;
+        border-radius: 0 2px 2px 0;
+    }
+    
+    
+    #aktuell a.button_weiter{
+        right:0;
+        border-radius: 2px 0 0 2px;
+    }
+
+
+    /* Linien */
+
+    #aktuell .line1{
+        height: 190px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -15%;
+        left: 48%;
+        z-index:999;
+    }
+
+    #aktuell .line2{
+        height: 300px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -22%;
+        left: 50%;
+        z-index: 999;
+    }
+
+    #aktuell .line3{
+        height: 220px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -18%;
+        left: 52%;
+        z-index: 999;
+    }
+
+    /*--------------------------TABLET - Section Aktuell - Second Page----------------------------- */
+
+    @media screen and (max-width:1280px){
+
+        #aktuell .image-frame{
+            width: 60%;
+            height: 65%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;   
+            border: 1px solid black;
+            position: relative;
+        }
+
+        #aktuell .image-frame .container-slides{
+            width: 90%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            position: absolute;
+            top:10%;    
+        }
+
+        #aktuell .title{
+            -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: tb-rl;
+                    writing-mode: vertical-rl;
+            position: absolute;
+            font-size: 100px;
+            left: -30%;
+            top: -30%;
+            z-index: 888;
+        } 
+
+        #aktuell .text .date{
+            position: absolute;
+            left:-1%;
+            top: 100%;
+            width: 100%;
+        }
+    
+    
+        #aktuell .image-frame .text .company{
+            position: absolute;
+            left:-1%;
+            top: 18%;
+            width: 100%;  
+        }
+
+        #aktuell .image-frame .text p{
+            position: absolute;
+            left:-1%;
+            top: 105%;
+            width: 100%
+        }
+        
+        /* Linien */
+
+        #aktuell .line1{
+            height: 190px;
+            width: 2px;
+            margin: 5px;
+            background: #707070;
+            position: absolute;
+            top: -35%;
+            left: 48%;
+            z-index:999;
+        }
+
+        #aktuell .line2{
+            height: 300px;
+            width: 2px;
+            margin: 5px;
+            background: #707070;
+            position: absolute;
+            top: -44%;
+            left: 50%;
+            z-index: 999;
+        }
+
+        #aktuell .line3{
+            height: 220px;
+            width: 2px;
+            margin: 5px;
+            background: #707070;
+            position: absolute;
+            top: -38%;
+            left: 52%;
+            z-index: 999;
+        }
+    }
+
+    /*--------------------------DESKTOP - Section About - Third Page----------------------------- */
+
+    #about{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack:center;
+            -ms-flex-pack:center;
+                justify-content:center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;    
+    }
+
+    #about .image-frame{
+        width: 46%;
+        height: 100%;
+        border: solid 1px black;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+    }
+
+    #about .image-frame .image-about{
+        width: 88%;
+        height: 750px;
+        background-image: url(images/image-about.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+
+    #about .title{
+        height: 100%;
+        -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+        position: absolute;
+        font-size: 100px;
+        right: -20%;
+        top: -20%;
+        z-index: 888;
+    } 
+
+    #about .text{
+        position: relative;
+        height:50%;
+        width: 35%;
+        right:70%;
+        top:0%;
+    }
+
+    #about .text h1{
+        position: absolute;
+        top:0%;
+        font-size: 30px;
+        text-align: right;
+    }
+
+    #about .text small{
+        position: absolute;
+        top: 17%;
+        text-align: right;
+    }
+
+    #about .text p{
+        position: absolute;
+        top: 25%;
+        font-size: 15px;
+        text-align: right;
+    }
+
+    /* Linien */
+
+    #about .line1{
+        height: 190px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -15%;
+        left: -25%;
+        z-index: 90;
+    }
+
+    #about .line2{
+        height: 300px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -20%;
+        left: -23%;
+        z-index: 90;
+    }
+
+    #about .line3{
+        height: 220px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -17%;
+        left: -21%;
+        z-index: 90;
+    }
+
+    /*--------------------------TABLET - Section About - Third Page----------------------------- */
+
+    @media screen and (max-width:1280px){
+
+
+        #about .image-frame{
+            width: 60%;
+            height: 65%;
+        }
+    
+        #about .image-frame .image-about{
+            width: 88%;
+            height: 500px;
+        }
+
+        #about .title{
+            height: 100%;
+            -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: tb-rl;
+                    writing-mode: vertical-rl;
+            position: absolute;
+            font-size: 100px;
+            right: -120px;
+            top: -40%;
+            z-index: 888;
+        }     
+
+        #about .text{
+            position: relative;
+            height:60%;
+            width: 100%;
+            top:80%;
+            left: 0%;
+        }
+    
+        #about .text h1{
+            position: absolute;
+            top:-183%;
+            font-size: 30px;
+            left: -2%;
+            text-align: left;
+        }
+    
+        #about .text small{
+            position: absolute;
+            top: 5%;
+            left: 0%;
+            text-align: left;
+        }
+    
+        #about .text p{
+            position: absolute;
+            top: 13%;
+            font-size: 15px;
+            text-align: left;
+        }
+    }
+
+/*--------------------------DESKTOP - Section Service - Fourth Page----------------------------- */
+
+    #service{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack:center;
+            -ms-flex-pack:center;
+                justify-content:center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+    }
+
+    #service .image-frame{
+        width: 46%;
+        height: 100%;
+        border: solid 1px black;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+
+    #service .image-frame .image-service{
+        width: 40%;
+        height: 750px;
+        background-image: url(images/image-service.jpg);
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+
+    #service .web{
+        height: 100%;
+        width: 15%;
+    }
+
+    #service .film{
+        height: 100%;
+        width: 20%;
+        position: absolute;
+        left: 40%;
+    }
+
+    #service .event{
+        height: 100%;
+        width: 15%;
+    }
+
+    #service .title{
+        -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+        position: absolute;
+        font-size: 100px;
+        left: 18%;
+        top: 0%;
+        z-index: 888;
+    } 
+
+    /* Linien */
+
+    #service .line1{
+        height: 190px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -20%;
+        left: 85%;
+        z-index:999;
+    }
+
+    #service .line2{
+        height: 300px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -27%;
+        left: 86%;
+        z-index: 999;
+    }
+
+    #service .line3{
+        height: 220px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -22%;
+        left: 87%;
+        z-index: 999;
+    }
+
+    /* Kreise */
+
+    #service .circle1{
+        position: absolute;
+        left: 45%;
+        opacity: 0.5;
+    }
+
+    #service .circle2{
+        position: absolute;
+        left: 33%;
+        top: 52%;
+        opacity: 0.5;
+    }
+
+    #service .circle3{
+        position: absolute;
+        left: 45%;
+        opacity: 0.5;
+    }
+
+/*--------------------------TABLET - Section Service - Fourth Page----------------------------- */
+
+        @media screen and (max-width:1280px){
+
+        #service .image-frame{
+            width: 60%;
+            height: 65%;
+        }
+
+        #service .image-frame .image-service{
+            width: 55%;
+            height: 500px;
+        }
+
+        #service .title{
+            -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: tb-rl;
+                    writing-mode: vertical-rl;
+            position: absolute;
+            font-size: 100px;
+            left: 5%;
+            top: 0%;
+            z-index: 888;
+        } 
+
+        #service .web{
+            height: 100%;
+            width: 25%;
+            left: 22%;
+        }
+
+        #service .film{
+            height: 100%;
+            width: 35%;
+            position: absolute;
+            left: 41%;
+            top: 44%;
+        }
+
+        #service .event{
+            height: 100%;
+            width: 30%;
+            left: 22%;
+            top: 60%;
+        }
+
+
+        /* Kreise */
+
+        #service .circle3{
+        position: absolute;
+        left: 55%;
+        top: 63%;
+        opacity: 0.5;
+        }
+
+    }
+
+/*-------------------------- DESKTOP - Section Gallery - Fifth Page----------------------------- */
+
+    #gallery{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack:center;
+            -ms-flex-pack:center;
+                justify-content:center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;    
+    }
+
+    #gallery .image-frame{
+        width: 46%;
+        height: 843px;
+        border: solid 1px black;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+    }
+
+    #gallery .image-frame #image-gallery{
+        width: 88%;
+        height: 750px;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+    }
+
+    #gallery .title{
+        -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+        position: absolute;
+        font-size: 100px;
+        right: -20%;
+        height: 500px;
+        top: 0%;
+        z-index: 888;
+    }
+
+
+    .bilder img{
+        width: 90px; 
+        height: 100px;
+        right: 500%;
+        top: -150%;
+        position: relative;   
+    }
+
+    .bilder{
+        position: absolute; 
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+        bottom: 7%;
+        left:11%;
+    }
+
+    .bilder img:hover{
+        opacity: 0.5;
+        -webkit-transition: all 0.2s ease;
+        transition: all 0.2s ease;
+    }
+
+    /* Linien */
+
+    #gallery .line1{
+        height: 190px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -15%;
+        left: -25%;
+        z-index: 90;
+    }
+
+    #gallery .line2{
+        height: 300px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -20%;
+        left: -23%;
+        z-index: 90;
+    }
+
+    #gallery .line3{
+        height: 220px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -17%;
+        left: -21%;
+        z-index: 90;
+    }
+
+/*-------------------------- TABLET - Section Gallery - Fifth Page----------------------------- */
+
+    @media screen and (max-width:1280px){ 
+
+         #gallery .image-frame{
+            width: 60%;
+            height: 843px;
+            top: -80px;
+        }
+    
+        #gallery .image-frame #image-gallery{
+            width: 88%;
+            height: 550px;
+            top: 30px;
+        }
+
+        #gallery .title{
+            -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: tb-rl;
+                    writing-mode: vertical-rl;
+            position: absolute;
+            font-size: 100px;
+            right: -120px;
+            height: 500px;
+            top: -20%;
+            z-index: 888;
+        }
+
+        .bilder img{
+            width: 60px; 
+            height: 80px;
+            right: 215%;
+            top: 90%;
+            position: relative; 
+        }
+
+        .bilder{
+            position: absolute; 
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 15px;
+            bottom: 13%;
+            left:33%;
+        }         
+}
+
+/*-------------------------- DESKTOP - Section Contact - Sixth Page----------------------------- */
+
+    #contact{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack:center;
+            -ms-flex-pack:center;
+                justify-content:center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        position: relative;
+        
+    }
+
+    #contact .image-frame{
+        width: 46%;
+        height: 843px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        border: solid 1px black;
+        background: none;
+    }
+
+    #contact .image-frame .form-contact{
+        width: 88%;
+        height: 750px;
+        background: #707070;
+    }
+
+    #contact .title{
+        -webkit-writing-mode: vertical-rl;
+            -ms-writing-mode: tb-rl;
+                writing-mode: vertical-rl;
+        position: absolute;
+        font-size: 100px;
+        left: 20%;
+        top: 0%;
+        z-index: 888;
+    } 
+
+    #contact button{
+        margin: 1em 0;
+        padding: 0.5em 0;
+        background-color:rgb(196, 196, 196);
+        border: solid 1px white;
+        width: 40%;
+        color: #707070;
+        }
+        
+    #contact form button:hover{
+        background-color: white;
+        cursor: pointer;
+        }
+
+    #contact .text p{
+        position: absolute;
+        left:73%;
+        bottom: 0%;
+    }
+
+
+
+    /* Linien */
+
+    #contact .line1{
+        height: 190px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -20%;
+        left: 85%;
+        z-index:999;
+    }
+
+    #contact .line2{
+        height: 300px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -27%;
+        left: 86%;
+        z-index: 999;
+    }
+
+    #contact .line3{
+        height: 220px;
+        width: 2px;
+        margin: 5px;
+        background: #707070;
+        position: absolute;
+        top: -22%;
+        left: 87%;
+        z-index: 999;
+    }
+
+
+	/* - Formular*/
+
+	form{ 
+        height: 50%;
+        width: 100%;
+        position: relative;
+        top:10%;    
+    }
+    
+    label{
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        color: white;
+        padding: 2%;
+    }
+    
+    input{
+        width: 60%;
+        height: 9%;
+    
+    }
+    
+    textarea{
+        width: 60%;
+    }
+    
+    button{
+        margin: 1em 0;
+        padding: 0.5em 0;
+        background-color:#707070;
+        border: solid 1px white;
+        width: 40%;
+      }
+      
+    form button:hover{
+        background-color: white;
+        cursor: pointer;
+      }
+
+    form input:focus{
+        outline: black auto 5px;
+      }
+      
+    form span{
+        color: red;
+        font-family: sans-serif;
+        font-size: 12px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+      }
+      
+      .mybox{
+        width: 500px;
+        height: 500px;
+        color: #707070;
+        background-color: #fff;
+        font-size: 1em;
+        text-align: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        padding: 1em;
+        position: absolute;
+        left: 35.5%;
+        top: 21.5%;
+        opacity: 0.8;
+      }
+
+    /*-------------------------- TABLET - Section Contact - Sixth Page----------------------------- */
+
+    @media screen and (max-width:1280px){
+
+        #contact .image-frame{
+            width: 60%;
+            height: 65%;
+        }
+    
+        #contact .image-frame .form-contact{
+            width: 100%;
+            height: 550px;
+            background: #707070;
+            border: 1px solid black;
+        }
+
+        #contact .title{
+            -webkit-writing-mode: vertical-rl;
+                -ms-writing-mode: tb-rl;
+                    writing-mode: vertical-rl;
+            position: absolute;
+            font-size: 100px;
+            left: 5%;
+            top: -20%;
+            z-index: 888;
+        } 
+        
+        #contact .text p{
+            position: absolute;
+            left:80%;
+            bottom: 0%;
+            display: none;
+        }
+    }
+
+}
